@@ -7,6 +7,11 @@ body {
   height: 100vh;
   display: flex;
   flex-direction: column;
+  border: 3px solid rgb(255, 255, 255);
+  font-weight: bold;
+  background-color: rgb(0, 0, 0);
+  justify-content: center;
+  text-align: center;
 }
 
 section.board {
@@ -14,11 +19,114 @@ section.board {
   grid-template-rows: repeat(3, 10vmin);
   grid-template-columns: repeat(3, 10vmin);
   grid-gap: 0vmin;
+  color: aqua;
+  justify-content: center;
+  align-content: center;
+  
+  
 }
 
 div {
-  border: 3px solid black;
+  border: 3px solid rgb(255, 255, 255);
   font-size: 8vmin;
   text-align: center;
   vertical-align: middle;
+  align-content: center;
+}
+button {
+  border: 3px solid rgb(225, 221, 221);
+  height: 35px;
+  width: 100px;
+  background-color: rgb(0, 0, 0);
+  color: azure;
+  animation-fill-mode: both;
+  display: block;
+  margin: 1px auto;
+  border: 1px solid rgb(170, 251, 255);
+  border-radius: 10px;
+  
+  
+}
+button:hover{
+  color: rgb(0, 0, 0);
+  background-color: aliceblue;
+  align-content: center;
+  
+}
+h1 {
+  color: rgb(0, 0, 0);
+  -webkit-text-stroke: 0.4vw rgb(170, 251, 255);
+  font-size: 8vw;
+  opacity: 90%;
+  text-transform: uppercase;
+  animation: myAnim 2s ease 0s infinite normal forwards;
+  
+}
+
+@keyframes  myAnim {
+	0% {
+		transform: scale3d(1, 1, 1);
+	}
+
+	30% {
+		transform: scale3d(1.25, 0.75, 1);
+	}
+
+	40% {
+		transform: scale3d(0.75, 1.25, 1);
+	}
+
+	50% {
+		transform: scale3d(1.15, 0.85, 1);
+	}
+
+	65% {
+		transform: scale3d(0.95, 1.05, 1);
+	}
+
+	75% {
+		transform: scale3d(1.05, 0.95, 1);
+	}
+
+	100% {
+		transform: scale3d(1, 1, 1);
+	}
+}
+
+h2 {
+  color: red;
+  animation: myAnimm 2s ease 0s infinite normal forwards;
+
+}
+@keyframes myAnimm {
+	0%,
+	100% {
+		transform: translateX(0%);
+		transform-origin: 50% 50%;
+	}
+
+	15% {
+		transform: translateX(-30px) rotate(6deg);
+	}
+
+	30% {
+		transform: translateX(15px) rotate(-6deg);
+	}
+
+	45% {
+		transform: translateX(-15px) rotate(3.6deg);
+	}
+
+	60% {
+		transform: translateX(9px) rotate(-2.4deg);
+	}
+
+	75% {
+		transform: translateX(-6px) rotate(1.2deg);
+	}
+}
+
+section {
+  color: red;
+  text-align: center;
 }

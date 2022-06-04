@@ -17,6 +17,7 @@ let sum
 const squareEls = document.querySelectorAll('.squares')
 const messageEl = document.querySelector('#message')
 const gameboard = document.querySelector('.board')
+const resetBtnEl = document.querySelector('.reset-button')
 
 // console.log(gameboard)
 // console.log(squareEls)
@@ -25,6 +26,7 @@ const gameboard = document.querySelector('.board')
 /*----------------------------- Event Listeners -----------------------------*/
 
 gameboard.addEventListener('click', handleClick)
+resetBtnEl.addEventListener('click', init)
 
 
 
@@ -57,6 +59,8 @@ function render(){
             squareEls[idx].textContent = 'X'
         } else if (square === -1){
             squareEls[idx].textContent = 'O'
+        } else if (square === null) {
+            squareEls[idx].textContent = ''
         }
         // console.log(squareEls[idx])
     })
@@ -68,6 +72,7 @@ function render(){
         messageEl.textContent = `It is player ${turn}'s turn!`
       } else if (winner === 'T') {
         messageEl.textContent = `It's a tie!`
+      
       } else {
         winnerName()
     }
@@ -146,7 +151,8 @@ function winnerName() {
         messageEl.textContent = `player X's won`
     } else if(winner === -1){
         messageEl.textContent = `player O's won`
-    }
+    } 
+    
 }
 
 
